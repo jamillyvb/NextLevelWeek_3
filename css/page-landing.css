@@ -70,12 +70,18 @@ visit a {
 
 /* desktop version */
 @media (min-width: 760px) {
+  #container {
+    /*shorthand background: imagem position / size */
+    background: url("../img/bg.svg") no-repeat 80% / clamp(30rem, 54vw, 56rem);
+    padding: 5rem 2rem;
+    /* background-position: right center ;eixo x e y */
+  }
   header {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  
+
   .location,
   h1,
   .visit p {
@@ -88,9 +94,13 @@ visit a {
     font-size: 2.4rem;
     line-height: 1.5;
   }
-  
+
   main h1 {
-    font-size: clamp(4rem, 8vw, 8.4rem); /*formula para solucionar o tamanho da fonte que muda qaundo esta no mobile para desktop*/
+    font-size: clamp(
+      4rem,
+      8vw,
+      8.4rem
+    ); /*formula para solucionar o tamanho da fonte que muda qaundo esta no mobile para desktop*/
     line-height: 0.88;
     font-weight: bold;
 
@@ -99,18 +109,18 @@ visit a {
     width: min(300px, 80%);
   }
 
-  visit{
-    display: flex; 
+  .visit {
+    display: flex;
     align-items: center;
     justify-content: space-between;
-
   }
-  
-  visit p {
+
+  .visit p {
+    font-size: 2.4rem;
     line-height: 1.5;
     width: clamp(20rem, 20vw, 30rem);
-    font-size: 2.4rem;
-    color:blue;
-
+  }
+  .visit a {
+    margin: initial;
   }
 }
