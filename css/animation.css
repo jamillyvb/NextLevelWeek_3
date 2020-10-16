@@ -17,3 +17,7 @@
     animation-fill-mode: backwards;
    
 }
+.animate-right {
+    animation-name: right;
+    animation-duration: 300ms;
+  }
