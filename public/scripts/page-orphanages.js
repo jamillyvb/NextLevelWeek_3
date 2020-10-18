@@ -20,7 +20,7 @@ const popup = L.popup({
     minWidth: 240,
     minHeight: 240
 }
-).setContent('Lar das Meninas <a href="orphanage.html?id=1" class="choose-orphanages"> <img src="./img/arrow-white.svg"></a>')
+).setContent('Lar das Meninas <a href="orphanage?id=1" class="choose-orphanages"> <img src="./img/arrow-white.svg"></a>')
 
 
 // criar e adicionar marker

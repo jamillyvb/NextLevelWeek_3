@@ -1,6 +1,8 @@
 //importar biblioteca
 const express = require('express');
 const path = require('path');
+const pages = require('./pages.js');
+
 
 //iniciando o express
 const server = express();
@@ -11,11 +13,17 @@ server
 .use(express.static('public'))
 
 
-//criar rota
-.get('/', (request, response) => {
-    // console.log(request.query)
-    return response.sendFile(path.join(__dirname, 'views', 'index.html'))
-})
+//configurar template  engines
+.set('views', path.join(__dirname, "views"))
+.set('view engine', 'hbs')
+
+
+// rotas da aplicação
+.get('/', pages.index)
+.get('/orphanage', pages.orphanage)
+.get('/orphanages', pages.orphanages)
+.get('/create-orphanage', pages.createOrphanage)
+
 
 
 //iniciar servidor
